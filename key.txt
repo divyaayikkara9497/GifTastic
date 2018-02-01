@@ -1,0 +1,9 @@
+API key: rrDJESjwmjV9unpaBxu4sPqAkAK2Tyh5
+needed:
+	q: categoty = topic
+	limit:10
+	offset: 0
+	rating:G
+	languge:en
+	request URL: https://api.giphy.com/v1/gifs/search?api_key=rrDJESjwmjV9unpaBxu4sPqAkAK2Tyh5&q=holiday&limit=10&offset=0&rating=G&lang=en
+
