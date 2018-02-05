@@ -7,38 +7,34 @@
 	<!-- Bootstrap Link -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
      <!-- CSS link -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-	<div class="container">
-		<!-- Header -->
+	<div class="container"> 
+				<!-- Header -->
 		<div id="header">
 			<h1> Welcome to the world of Harry Potter! </h1>
 		</div>
-		<!-- Display Buttons area -->
+				<!-- Display Buttons area -->
 		<div class="row">
 			<div class="col-md-12" id="displayButtons"></div>
 		</div>
 
 		<br><br>
 
-		<div class="container">
-			
-		<div class="col-md-9" id="displayImages"></div>
+		<div class="row">
 			<!-- User input area -->
-        <div class="col-md-3">
-            <form id="form">
-                <label for="userInput">Enter whichever Holidy you want!</label><br>
-                <input type="text" id="userInput">
-                <br><br>
-                <input id="submitButton" type="submit" value="Submit" class="btn btn-default">
-            </form>
-        </div>
-
+			<form id="form">
+				<label for="userInput">Enter whichever Holidy you want!</label> <br>
+				<input type="text" id="userInput"> <br> <input id="submitButton" type="submit" value="Submit" class="btn btn-default">
+			</form>
 		</div>
 
+		<!-- Gif areas -->
+		<div id="displayImages">	
+		</div>
 
-    </div>
-	<script type="text/javascript" src="assets/javascript/logic.js"></script>
+	</div>
+<script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>
 </html>

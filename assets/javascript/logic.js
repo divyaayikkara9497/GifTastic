@@ -25,6 +25,7 @@ function displayGif() {
             image.attr("data-animate",results[i].images.fixed_height.url); 
             image.attr("data-state", "still"); 
             image.attr("class" , "gif");
+            image.addClass("imageHolder");
             gifDiv.append(image);
 
             var title = $("<p>").text("Title: " + results[i].title); 

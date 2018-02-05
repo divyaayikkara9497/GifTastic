@@ -1,4 +1,11 @@
+body {
+	background-image: url("../images/howgarts.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
 h1 {
+	padding: 30px;
 	color: black;
 	text-align: center;
 }
@@ -6,4 +13,26 @@ h1 {
 img { 
     height: 250px;
     width: 250px;
+}
+
+.gifDiv{
+    float: left;
+    margin: 3px;
+}
+
+#input {
+	margin-right: 5px;
+}
+
+#displayButtons {
+	margin-left: 75px;
+}
+
+#form {
+	color: white;
+	font-size: 25px;
+}
+
+.rating {
+	color: white;
 }
