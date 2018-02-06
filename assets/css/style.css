@@ -1,7 +1,5 @@
 body {
-	background-image: url("../images/howgarts.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
+	background-color: #F0E68C;
 }
 
 h1 {
@@ -33,6 +31,3 @@ img {
 	font-size: 25px;
 }
 
-.rating {
-	color: white;
-}
