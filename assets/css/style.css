@@ -1,5 +1,5 @@
 body {
-	background-color: #FFCDB2;
+	background-color: #F3FFBD;
 	font-family: Georgia;
 	color: black;
 
@@ -22,7 +22,7 @@ img {
 
 .jumbotron {
 	padding:30px;
-	background-color: #FFB4A2;
+	background-color: #FFCDB2;
 }
 
 .gifDiv{
@@ -43,7 +43,7 @@ img {
 	margin: 20px;
 	font-family: Georgia;
 	font-size: 20px;
-	background-color: #FFB4A2;
+	background-color: #FFCDB2;
 	padding: 50px;
 	text-align: center;
 	border-color: black;
