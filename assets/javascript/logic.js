@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
-var topics = ["Harry Potter" , "Ron Weasley" , "Hermione Weasley" , "Luna Lovegood" , "Ginny Weasley" , "Neville Longbottom" , "Albus Dumbledore" , "Sirius Black"];
+var topics = ["Harry Potter" , "Ron Weasley" , "Hermione Weasley" , "Luna Lovegood" , "Ginny Weasley" , "Neville Longbottom" , "Albus Dumbledore" , "Sirius Black", "Lily Potter"];
 
 
 function displayGif() {
 	$("#displayImages").empty();
 	var input = $(this).attr("data-name");
 	//var limit = 10;
-	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=20&api_key=rrDJESjwmjV9unpaBxu4sPqAkAK2Tyh5";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=30&api_key=rrDJESjwmjV9unpaBxu4sPqAkAK2Tyh5";
 	//console.log(queryURL);
 
 	$.ajax({
@@ -19,19 +19,22 @@ function displayGif() {
 		var results = response.data;
 		for(var i = 0; i < results.length; i++){
 			var gifDiv = $("<div>");
+			var rating = $("<p class='rating'>").text("Rating: " + results[i].rating);
+			var title = $("<p class='title'>").text("Title: " + results[i].title); 
 			var image = $("<img>");
+
+			title.addClass("title-text");
+			rating.addClass("rating-text");
+			image.addClass("image-gif");
 			image.attr("src", results[i].images.fixed_height_still.url); 
             image.attr("data-still", results[i].images.fixed_height_still.url); 
             image.attr("data-animate",results[i].images.fixed_height.url); 
             image.attr("data-state", "still"); 
-            image.attr("class" , "gif");
-            image.addClass("imageHolder");
+            image.attr("data-position", i);
+            gifDiv.append(title);
+            gifDiv.append(rating);
             gifDiv.append(image);
-
-            var title = $("<p>").text("Title: " + results[i].title); 
-			var rating = $("<p>").text("Rating: " + results[i].rating);
-			gifDiv.append(title);
-			gifDiv.append(rating);
+            gifDiv.addClass("individual-gifs");
 
             $("#displayImages").prepend(gifDiv);
 		}
@@ -78,7 +81,7 @@ $("#submitButton").on("click", function() {
 
 makeButton();
 $(document).on("click" , "#input" , displayGif);
-$(document).on("click" , ".gif" , gifChange);
+$(document).on("click" , ".image-gif" , gifChange);
 });
 
 

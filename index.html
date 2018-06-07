@@ -5,42 +5,45 @@
 	<!-- jQuery Link -->
 	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 	<!-- Bootstrap Link -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
      <!-- CSS link -->
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-	<div class="container"> 
-				<!-- Header -->
-		<div id="header">
-			<h1> Welcome to the world of Harry Potter! </h1>
+	<div class="container-fluid"> 
+		<!-- Header -->
+		<div class="jumbotron">
+			<h1 class="display-5"> Welcome to the World of Harry Potter! </h1>
+			<hr>
+			<h3 class="lead text-center"> Using the Giphy API, you can search any magical gifs that you want! Enter your search to be saved and click the buttons to enter the magical world of Harry Potter Gifs! </h3>
 		</div>
-				<!-- Display Buttons area -->
-		<div class="row">
-			<div class="col-md-12" id="displayButtons"></div>
+
+
+		<!-- Display Buttons area -->
+		<div class="row justify-content-center" id="displayButtons">
 		</div>
 
 		<br><br>
 
-		<div class="row">
+
+
+		<div class="row justify-content-center">
 			<!-- User input area -->
 			<form id="form">
-				<label for="userInput">Enter whichever Holidy you want!</label> <br>
-				<input type="text" id="userInput"> 
-
-				<br> 
-
+				<input type="text" placeholder="Add your magic!" id="userInput"> 
 				<input id="submitButton" type="submit" value="Submit" class="btn btn-default">
 			</form>
 		</div>
 
 		<!-- Gif areas -->
-		<div class="row">
-			<div class="col-md-12">
+		<div class="row" id="gif-row">
+			<div class="col">
 				<div id="displayImages"></div>
 			</div>
 		</div>
-</div>
+	</div>
 <script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>
 </html>
